@@ -14,7 +14,7 @@ public class DAOPersona implements IDAOGeneral<Persona> {
     public boolean guardar(Persona pojo) {
         boolean res  = false;
         ConexionDB con = ConexionDB.getInstace();
-        String sql ="insert into personas (Clave, Nombre, Direccion, Telefono) values "
+        String sql ="insert into persona (Clave, Nombre, Direccion, Telefono) values "
                 +"('"+pojo.getClave()+"','"+pojo.getNombre()+"','"+pojo.getDireccion()+"','"+
                 pojo.getTelefono()+"','"+pojo.getDepartamento()+"')";  
         res = con.execute(sql);

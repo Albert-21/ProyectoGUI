@@ -5,6 +5,8 @@
  */
 package proyectogui;
 
+import java.awt.Component;
+
 /**
  *
  * @author Luis Alberto
@@ -74,7 +76,15 @@ public class Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
         DepartamentoGUI dep = DepartamentoGUI.getInstace();
         dep.setVisible(true);
+        
+        for (Component com : jDesktopPane1.getComponents()) {
+            if (com.equals(dep)) {
+                return;
+            }
+            
+        }
         jDesktopPane1.add(dep);
+        
          
     }//GEN-LAST:event_mnuDepartamentoActionPerformed
 
